@@ -19,11 +19,11 @@ CClient::CClient()
 		return;
 	}
 
-	m_sockClient = socket(AF_INET, SOCK_DGRAM, 0);
+	m_sockClient = socket(AF_INET, SOCK_DGRAM, 0);  
 
 	m_TargetServer.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
 	m_TargetServer.sin_family = AF_INET;
-	m_TargetServer.sin_port = htons(8090);
+	m_TargetServer.sin_port = htons(8090) ;
 
 	//不需要创建连接，直接发送消息即可
 
